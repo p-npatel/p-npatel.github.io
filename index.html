@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>X's Minimal Portfolio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #273064;
+            padding: 30px;
+            text-align: center;
+            color: white;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            background-color: white;
+            border-bottom: 1px solid #ccc;
+        }
+        nav a {
+            color: #273064;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 900px;
+        }
+        section h2 {
+            font-size: 1.8rem;
+            color: #273064;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        section p, section ul {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .project {
+            background-color: #fff;
+            border: 2px solid black;
+            padding: 20px;
+            width: 30%;
+            margin-bottom: 20px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .project a {
+            text-decoration: none;
+            color: #273064;
+            font-weight: bold;
+        }
+        .project:hover {
+            background-color: #f0f0f5;
+        }
+        .experience, .education, .contact {
+            margin-bottom: 30px;
+        }
+        .certifications ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .certifications li {
+            margin-bottom: 10px;
+        }
+        .certificate-link {
+            color: #273064;
+            text-decoration: none;
+        }
+        .certificate-link:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #273064;
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>X's Minimal Portfolio</h1>
+    </header>
+
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm X, a Data Analyst specializing in machine learning, financial forecasting, and business intelligence. I focus on creating data-driven solutions and optimizing business processes through advanced analytics.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <a href="gan.html">Forecasting Assist Movement via GAN</a>
+            </div>
+            <div class="project">
+                <a href="news.html">Fake and AI Generated News Detector</a>
+            </div>
+            <div class="project">
+                <a href="sentiment.html">Wall Street Bets Sentiment Analysis</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+
+        <div class="experience">
+            <h3>XYZ Company | Business/Data Analyst | APR 2021 - JUN 2022</h3>
+            <ul>
+                <li>Collaborated with cross-functional teams to understand project requirements and deliver actionable insights.</li>
+                <li>Assisted development teams in clarifying requirements to ensure complete coverage.</li>
+                <li>Designed data pipelines using AWS Data Pipeline and Azure Data Factory.</li>
+                <li>Utilized SQL, NoSQL, and data lakes for data warehousing and ETL systems.</li>
+            </ul>
+        </div>
+
+        <div class="experience">
+            <h3>XYZ Company | Business/Data Analyst | JAN 2020 - FEB 2021</h3>
+            <ul>
+                <li>Developed and implemented an order tracking database using SQL and Python, reducing processing time.</li>
+                <li>Conducted predictive modeling, contributing to a 10% increase in sales revenue.</li>
+                <li>Implemented financial forecasting models, supporting strategic planning.</li>
+            </ul>
+        </div>
+
+        <div class="experience">
+            <h3>XYZ Company | Business Analyst Intern | JUN 2019 - JAN 2020</h3>
+            <ul>
+                <li>Developed workflow diagrams to explain current and future state of applications.</li>
+                <li>Followed Agile methodologies, participating in sprint planning and standup meetings.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="education" class="education">
+        <h2>Education</h2>
+        <p><strong>MS Business Analytics</strong> - AB University (2022 - 2023)</p>
+        <p><strong>BA Economics</strong> - XY University (2015 - 2019)</p>
+
+        <div class="certifications">
+            <h3>Certifications</h3>
+            <ul>
+                <li><a href="path/to/certificate1.pdf" class="certificate-link" target="_blank">Python for Data Science Certification</a></li>
+                <li><a href="path/to/certificate2.pdf" class="certificate-link" target="_blank">Machine Learning with TensorFlow</a></li>
+                <li><a href="path/to/certificate3.pdf" class="certificate-link" target="_blank">AWS Certified Solutions Architect</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>If you'd like to collaborate or learn more about my work, feel free to <a href="mailto:your-email@example.com" style="text-decoration: underline; color: #273064;">get in touch</a>.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 X. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

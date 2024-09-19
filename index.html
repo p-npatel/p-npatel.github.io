@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -41,8 +41,8 @@
             text-decoration: underline;
         }
         section {
-            padding: 30px;
-            margin: 30px auto;
+            padding: 0px;
+            margin: 20px auto;
             max-width: 900px;
         }
         section h2 {
@@ -63,6 +63,9 @@
         ul li {
             margin-bottom: 10px;
         }
+        #skills {
+            margin-top: 110px;
+        }
         .projects {
             display: flex;
             flex-wrap: wrap;
@@ -73,7 +76,7 @@
             border: 2px solid black;
             padding: 20px;
             width: 30%;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             text-align: center;
             box-sizing: border-box;
         }
@@ -111,7 +114,7 @@
 
         /* Timeline styling */
         .timeline-container {
-            margin-top: 150px;
+            margin-top: 125px;
             text-align: center;
             position: relative;
         }
@@ -122,7 +125,7 @@
             position: relative;
             margin: 0 auto;
             width: 90%;
-            height: 150px;
+            height: auto;
         }
 
         .timeline::before {
@@ -145,7 +148,7 @@
         .timeline-item::before {
             content: '';
             position: absolute;
-            width: 2px;
+            width: 0.5px;
             background-color: #333;
             left: 50%;
             top: 50%;
@@ -156,20 +159,22 @@
 
         .timeline-item.above::before {
             top: 15%;
-            height: 79px;
+            height: px;
             margin-top: -25px;
         }
 
         .timeline-item.below::before {
             bottom: 33%;
-            height: 50px;
+            height: px;
             margin-bottom: -25px;
         }
 
         .timeline-event {
             padding: 10px;
+            border-radius: 5px;
             z-index: 2;
             width: 100%;
+            max-width: 160px;
         }
 
         .timeline-item.above .timeline-event {
@@ -177,57 +182,29 @@
         }
 
         .timeline-item.below .timeline-event {
-            transform: translateY(60%);
+            transform: translateY(79%);
         }
 
         .timeline-event h4 {
-            color: #333;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
+            color: #723d3d;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
         }
 
         .timeline-event p {
-            font-size: 1rem;
+            font-size: 0.9rem;
             margin: 0;
         }
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
+            .timeline-container {
+                transform: scale(0.7);
+                transform-origin: center top;
+            }
+
             .timeline {
-                flex-direction: column;
-                height: auto;
-            }
-
-            .timeline::before {
-                top: 0;
-                left: 50%;
-                width: 2px;
-                height: 100%;
-            }
-
-            .timeline-item {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                margin: 20px 0;
-            }
-
-            .timeline-item.above .timeline-event, 
-            .timeline-item.below .timeline-event {
-                transform: translateY(0);
-            }
-
-            .timeline-item::before {
-                width: 100%;
-                height: 2px;
-                top: auto;
-                bottom: 0;
-                left: 0;
-            }
-
-            .timeline-event {
-                width: 90%;
-                margin: 0 auto;
+                flex-wrap: wrap;
             }
 
             .timeline-event h4 {
@@ -237,7 +214,17 @@
             .timeline-event p {
                 font-size: 0.9rem;
             }
+            .projects {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .project {
+                width: 90%;
+            }
         }
+
+
 
         @media (max-width: 480px) {
             header h1 {
@@ -249,11 +236,21 @@
             nav a {
                 margin: 5px 0;
             }
+
+            .timeline-container {
+                transform: scale(0.7);
+                transform-origin: center top;
+            }
+
+            .timeline {
+                flex-wrap: wrap;
+            }
+
             .timeline-event h4 {
-                font-size: 1rem;
+                font-size: 0.9rem;
             }
             .timeline-event p {
-                font-size: 0.9rem;
+                font-size: 0.8rem;
             }
         }
     </style>
@@ -261,63 +258,127 @@
 <body>
 
     <header>
-        <h1>X</h1>
+        <h1>Parth Patel</h1>
     </header>
 
     <nav>
         <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
+        <a href="resume.html">Resume</a>
         <a href="#contact">Contact</a>
     </nav>
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Hi, I'm X, a passionate Data Analyst with expertise in machine learning, financial forecasting, and business intelligence. Over the past few years, I have led the development of advanced models, implemented ETL systems, and optimized business processes using data-driven strategies. I thrive in collaborative environments, continuously finding innovative solutions to complex problems.</p>
-    
-        <!-- Minimalistic Horizontal Timeline with Alternating Events -->
+        <p>Hi, I'm Parth, a passionate Data Analyst with expertise in machine learning, financial forecasting, and business intelligence. Over the past few years, I have led the development of advanced models, implemented ETL systems, and optimized business processes using data-driven strategies. I thrive in collaborative environments, continuously finding innovative solutions to complex problems.</p>
+    </section>
+
+    <!-- Minimalistic Horizontal Timeline with Alternating Events -->
+    <section id="timeline">
         <div class="timeline-container">
             <div class="timeline">
                 <!-- Event 1 (Above the Line) -->
                 <div class="timeline-item above">
                     <div class="timeline-event">
                         <h4>2015 - 2019</h4>
-                        <p>BA in Economics at XYZ University.</p>
+                        <p>BA in Economics at Stony Brook University.</p>
                     </div>
                 </div>
                 <!-- Event 2 (Below the Line) -->
                 <div class="timeline-item below">
                     <div class="timeline-event">
                         <h4>2019</h4>
-                        <p>Interned at XYZ, learned business analysis skills.</p>
+                        <p>Interned at Droisys Inc, learned business analysis skills.</p>
                     </div>
                 </div>
                 <!-- Event 3 (Above the Line) -->
                 <div class="timeline-item above">
                     <div class="timeline-event">
-                        <h4>2020</h4>
-                        <p>Began working as a Business/Data Analyst at XYZ.</p>
+                        <h4>2020 - 2021</h4>
+                        <p>Began working as a Business/Data Analyst at Mvation.</p>
                     </div>
                 </div>
-                <!-- Event 4 (Above the Line) -->
-                <div class="timeline-item above">
-                    <div class="timeline-event">
-                        <h4>2021</h4>
-                        <p>Joined XYZ as a Business/Data Analyst.</p>
-                    </div>
-                </div>
-                <!-- Event 5 (Below the Line) -->
+                <!-- Event 4 (Below the Line) -->
                 <div class="timeline-item below">
                     <div class="timeline-event">
+                        <h4>2021 - 2022</h4>
+                        <p>Joined Popway Software as a Business/Data Analyst.</p>
+                    </div>
+                </div>
+                <!-- Event 5 (Above the Line) -->
+                <div class="timeline-item above">
+                    <div class="timeline-event">
                         <h4>2022 - 2023</h4>
-                        <p>MS in Business Analytics at AB University.</p>
+                        <p>MS in Business Analytics at Fordham University.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Skills Section -->
+     <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li><strong>Languages:</strong> Python, Java, R, VBA, SQL, MySQL, HiveQL, NoSQL</li>
+            <li><strong>Data Analysis & Modeling:</strong> IBM SPSS Modeler, Power BI, Tableau, Oracle SQL Developer Data Modeler, Alteryx, SSIS, Apache Spark, Hive, Pig, Scala, Pandas, Numpy, Scikit-Learn, TensorFlow, Pytorch, Looker, Rapidminer, Adobe Analytics, MiniTab</li>
+            <li><strong>Data Engineering & Big Data Technologies:</strong> Hadoop (MapReduce, Pig, Hive), Cloudera, Hortonworks, Zookeeper</li>
+            <li><strong>Cloud Platforms:</strong> Amazon Web Services (AWS), Google Cloud, Azure Databricks, Oracle APEX, Google Analytics</li>
+            <li><strong>Machine Learning & AI:</strong> Natural Language Processing (NLP), TensorFlow, Pytorch, Scikit-Learn</li>
+            <li><strong>Visualization Tools:</strong> Tableau, Power BI, Looker</li>
+            <li><strong>Methodologies:</strong> Agile, Scrum</li>
+            <li><strong>CRM & Marketing Technologies:</strong> HubSpot, Salesforce, Raiser’s Edge, SAP</li>
+            <li><strong>Development & Collaboration Tools:</strong> Jira, Jupyter Notebook</li>
+            <li><strong>Design & Multimedia:</strong> Photoshop, GIMP</li>
+        </ul>
+    </section>
     
+    <section id="experience">
+        <h2>Experience</h2>
+
+        <div class="experience">
+            <h3>Popway Software Pvt Ltd | Business/Data Analyst | APR 2021 - JUN 2022</h3>
+            <ul>
+                <li>Collaborated with cross-functional teams to understand project requirements and deliver actionable insights.</li>
+                <li>Assisted the development teams by reviewing their test cases and clarifying the requirements to ensure complete coverage.</li>
+                <li>Responsible for creating and documenting Business Requirements, Functional and Non-Functional requirements, System Specifications, etc.</li>
+                <li>Designed data pipelines using AWS Data Pipeline or Azure Data Factory to automate data movement and transformation between various cloud and on-premises data sources.</li>
+                <li>Leveraged NLP techniques (sentiment analysis, topic modeling) to extract insights from unstructured data sources.</li>
+                <li>Participated in continuous integration and continuous deployment (CI/CD) pipelines to streamline the development process.</li>
+                <li>Utilized relational and non-relational tools like SQL and NoSQL to construct data warehouse, data lake, and ETL systems.</li>
+                <li>Developed visualizations using Tableau and Power BI, productively communicating complex data insights to stakeholders and enhancing project understanding.</li>
+            </ul>
+        </div>
+
+        <div class="experience">
+            <h3>Mvation Worldwide Inc | Business/Data Analyst | JAN 2020 - FEB 2021</h3>
+            <ul>
+                <li>Developed and implemented an order tracking database using SQL and Python, reducing order processing and tracking time.</li>
+                <li>Conducted in-depth data mining and predictive modeling using Amazon Redshift and Python, identifying patterns and anomalies in customer behavior, contributing to a 10% increase in sales revenue and improved inventory management.</li>
+                <li>Implemented robust financial forecasting models, providing actionable insights that informed strategic planning and budgeting.</li>
+                <li>Collaborated with programmers to develop a new payment system, eliminating the need for manual calls and saving significant man-hours.</li>
+                <li>Partnered with sales managers to evaluate revenue optimization opportunities and redesign processes using SQL and Salesforce, achieving a 20% increase in sales efficiency.</li>
+                <li>Collaborated with cross-functional teams to define and prioritize KPIs using Power BI and SQL, establishing automated reporting systems, enabling real-time monitoring of KPIs, and delivering actionable insights to support strategic sales initiatives.</li>
+                <li>Optimized existing BI solutions by fine-tuning SQL queries and data models, enhancing performance and scalability to support growing sales data volumes.</li>
+            </ul>
+        </div>
+
+        <div class="experience">
+            <h3>Droisys Inc | Business Analyst Intern | JUN 2019 - JAN 2020</h3>
+            <ul>
+                <li>Established Business Process flows and workflow diagrams to explain current state and determine future state of rewrite applications.</li>
+                <li>Developed comprehensive understanding of business processes, defining as-is/to-be business models for effective communication.</li>
+                <li>Conducted working sessions, interviewed Project Stakeholders to gather Business Requirements & Functional Requirements.</li>
+                <li>Followed Agile Methodology and participated in Sprint Planning, Daily Standup meetings, and Retrospective meetings.</li>
+                <li>Tracked/managed action items, issues, incidents, and risks using issue/bug tracking system and test management tools (JIRA).</li>
+                <li>Engaged in system testing during User Acceptance Testing to help ensure that all functional requirements were bug-free.</li>
+            </ul>
+        </div>
+    </section>
+
     <section id="projects">
         <h2>Projects</h2>
         <div class="projects">
@@ -332,54 +393,10 @@
             </div>
         </div>
     </section>
-
-    <section id="experience">
-        <h2>Experience</h2>
-
-        <div class="experience">
-            <h3>XYZ Company | Business/Data Analyst | APR 2021 - JUN 2022</h3>
-            <ul>
-                <li>Collaborated with cross-functional teams to understand project requirements and deliver actionable insights.</li>
-                <li>Assisted the development teams by reviewing their test cases and clarifying the requirements to ensure complete coverage.</li>
-                <li>Responsible for creating and documenting Business Requirements, Functional and Non-Functional requirements, System Specifications, etc.</li>
-                <li>Designed data pipelines using AWS Data Pipeline or Azure Data Factory to automate data movement and transformation between various cloud and on-premises data sources.</li>
-                <li>Leveraged NLP techniques (sentiment analysis, topic modeling) to extract insights from unstructured data sources.</li>
-                <li>Participated in continuous integration and continuous deployment (CI/CD) pipelines to streamline the development process.</li>
-                <li>Utilized relational and non-relational tools like SQL and NoSQL to construct data warehouse, data lake, and ETL systems.</li>
-                <li>Developed visualizations using Tableau and Power BI, productively communicating complex data insights to stakeholders and enhancing project understanding.</li>
-            </ul>
-        </div>
-
-        <div class="experience">
-            <h3>XYZ Company | Business/Data Analyst | JAN 2020 - FEB 2021</h3>
-            <ul>
-                <li>Developed and implemented an order tracking database using SQL and Python, reducing order processing and tracking time.</li>
-                <li>Conducted in-depth data mining and predictive modeling using Amazon Redshift and Python, identifying patterns and anomalies in customer behavior, contributing to a 10% increase in sales revenue and improved inventory management.</li>
-                <li>Implemented robust financial forecasting models, providing actionable insights that informed strategic planning and budgeting.</li>
-                <li>Collaborated with programmers to develop a new payment system, eliminating the need for manual calls and saving significant man-hours.</li>
-                <li>Partnered with sales managers to evaluate revenue optimization opportunities and redesign processes using SQL and Salesforce, achieving a 20% increase in sales efficiency.</li>
-                <li>Collaborated with cross-functional teams to define and prioritize KPIs using Power BI and SQL, establishing automated reporting systems, enabling real-time monitoring of KPIs, and delivering actionable insights to support strategic sales initiatives.</li>
-                <li>Optimized existing BI solutions by fine-tuning SQL queries and data models, enhancing performance and scalability to support growing sales data volumes.</li>
-            </ul>
-        </div>
-
-        <div class="experience">
-            <h3>XYZ Company | Business Analyst Intern | JUN 2019 - JAN 2020</h3>
-            <ul>
-                <li>Established Business Process flows and workflow diagrams to explain current state and determine future state of rewrite applications.</li>
-                <li>Developed comprehensive understanding of business processes, defining as-is/to-be business models for effective communication.</li>
-                <li>Conducted working sessions, interviewed Project Stakeholders to gather Business Requirements & Functional Requirements.</li>
-                <li>Followed Agile Methodology and participated in Sprint Planning, Daily Standup meetings, and Retrospective meetings.</li>
-                <li>Tracked/managed action items, issues, incidents, and risks using issue/bug tracking system and test management tools (JIRA).</li>
-                <li>Engaged in system testing during User Acceptance Testing to help ensure that all functional requirements were bug-free.</li>
-            </ul>
-        </div>
-    </section>
-
     <section id="education" class="education">
         <h2>Education</h2>
-        <p><strong>MS Business Analytics</strong> - AB University (2022 - 2023)</p>
-        <p><strong>BA Economics</strong> - XY University (2015 - 2019)</p>
+        <p><strong> Fordham University</strong> - MS Business Analytics (2022 - 2023)</p>
+        <p><strong> Stony Brook University</strong> - BA Economics (2015 - 2019)</p>
 
         <div class="certifications">
             <h3>Certifications</h3>
@@ -393,11 +410,11 @@
 
     <section id="contact" class="contact">
         <h2>Contact Me</h2>
-        <p>If you'd like to collaborate or learn more about my work, feel free to <a href="mailto:your-email@example.com" style="text-decoration: underline; color: #273064;">get in touch</a>.</p>
+        <p>If you'd like to collaborate or learn more about my work, feel free to <a href="mailto:parth9897@gmail.com" style="text-decoration: underline; color: #273064;">get in touch</a>.</p>
     </section>
 
     <footer>
-        <p>&copy; 2024 X. All rights reserved.</p>
+        <p>&copy; 2024 Parth Patel. All rights reserved.</p>
     </footer>
 
 </body>

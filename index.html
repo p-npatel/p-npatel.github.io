@@ -42,7 +42,7 @@
         }
         section {
             padding: 30px;
-            margin: 20px auto;
+            margin: 30px auto;
             max-width: 900px;
         }
         section h2 {
@@ -58,7 +58,7 @@
         }
         ul {
             list-style-type: disc;
-            padding-left: 20px; /* indentation */
+            padding-left: 20px;
         }
         ul li {
             margin-bottom: 10px;
@@ -108,18 +108,166 @@
             padding: 20px;
             color: white;
         }
+
+        /* Timeline styling */
+        .timeline-container {
+            margin-top: 150px;
+            text-align: center;
+            position: relative;
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin: 0 auto;
+            width: 90%;
+            height: 150px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #333;
+            z-index: 1;
+        }
+
+        .timeline-item {
+            position: relative;
+            width: 20%;
+            text-align: center;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: #333;
+            left: 50%;
+            top: 50%;
+            bottom: 50%;
+            margin: auto;
+            z-index: 1;
+        }
+
+        .timeline-item.above::before {
+            top: 15%;
+            height: 79px;
+            margin-top: -25px;
+        }
+
+        .timeline-item.below::before {
+            bottom: 33%;
+            height: 50px;
+            margin-bottom: -25px;
+        }
+
+        .timeline-event {
+            padding: 10px;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .timeline-item.above .timeline-event {
+            transform: translateY(-100%);
+        }
+
+        .timeline-item.below .timeline-event {
+            transform: translateY(60%);
+        }
+
+        .timeline-event h4 {
+            color: #333;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .timeline-event p {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .timeline {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .timeline::before {
+                top: 0;
+                left: 50%;
+                width: 2px;
+                height: 100%;
+            }
+
+            .timeline-item {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin: 20px 0;
+            }
+
+            .timeline-item.above .timeline-event, 
+            .timeline-item.below .timeline-event {
+                transform: translateY(0);
+            }
+
+            .timeline-item::before {
+                width: 100%;
+                height: 2px;
+                top: auto;
+                bottom: 0;
+                left: 0;
+            }
+
+            .timeline-event {
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            .timeline-event h4 {
+                font-size: 1rem;
+            }
+
+            .timeline-event p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                margin: 5px 0;
+            }
+            .timeline-event h4 {
+                font-size: 1rem;
+            }
+            .timeline-event p {
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>X's Minimal Portfolio</h1>
+        <h1>X</h1>
     </header>
 
     <nav>
         <a href="#about">About Me</a>
-        <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
     </nav>
@@ -127,8 +275,49 @@
     <section id="about">
         <h2>About Me</h2>
         <p>Hi, I'm X, a passionate Data Analyst with expertise in machine learning, financial forecasting, and business intelligence. Over the past few years, I have led the development of advanced models, implemented ETL systems, and optimized business processes using data-driven strategies. I thrive in collaborative environments, continuously finding innovative solutions to complex problems.</p>
+    
+        <!-- Minimalistic Horizontal Timeline with Alternating Events -->
+        <div class="timeline-container">
+            <div class="timeline">
+                <!-- Event 1 (Above the Line) -->
+                <div class="timeline-item above">
+                    <div class="timeline-event">
+                        <h4>2015 - 2019</h4>
+                        <p>BA in Economics at XYZ University.</p>
+                    </div>
+                </div>
+                <!-- Event 2 (Below the Line) -->
+                <div class="timeline-item below">
+                    <div class="timeline-event">
+                        <h4>2019</h4>
+                        <p>Interned at XYZ, learned business analysis skills.</p>
+                    </div>
+                </div>
+                <!-- Event 3 (Above the Line) -->
+                <div class="timeline-item above">
+                    <div class="timeline-event">
+                        <h4>2020</h4>
+                        <p>Began working as a Business/Data Analyst at XYZ.</p>
+                    </div>
+                </div>
+                <!-- Event 4 (Above the Line) -->
+                <div class="timeline-item above">
+                    <div class="timeline-event">
+                        <h4>2021</h4>
+                        <p>Joined XYZ as a Business/Data Analyst.</p>
+                    </div>
+                </div>
+                <!-- Event 5 (Below the Line) -->
+                <div class="timeline-item below">
+                    <div class="timeline-event">
+                        <h4>2022 - 2023</h4>
+                        <p>MS in Business Analytics at AB University.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-
+    
     <section id="projects">
         <h2>Projects</h2>
         <div class="projects">

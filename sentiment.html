@@ -62,6 +62,19 @@
             padding: 20px;
             margin-bottom: 20px;
         }
+
+        .download-link, .github-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #273064;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .download-link:hover, .github-link:hover {
+            background-color: #273064;
+        }
         footer {
             background-color: #273064;
             text-align: center;
@@ -84,22 +97,25 @@
     <section>
         <div class="project-content">
             <h2>Project Overview</h2>
-            <p>This project uses sentiment analysis to study the correlation between Reddit's Wall Street Bets subreddit posts and the performance of top S&P 500 companies. We employed natural language processing tools to analyze sentiment data.</p>
+            <p>This paper aims to study the correlation between Reddit's Wall Street Bets subreddit sentiment analysis and the performance of top S&P 500 companies. I employed natural language processing tools to analyze sentiment data.</p>
+            <a class="download-link" href="Wallst_sentiment.pdf" download="Wall Street Bets Sentiment Analysis.pdf">Download paper</a> <a class="github-link" href="https://github.com/yourusername/your-repo" target="_blank">View on GitHub</a> 
         </div>
 
         <div class="project-content">
             <h2>Key Achievements</h2>
             <ul>
-                <li>Collected data from Reddit and Yahoo Finance APIs for companies like Tesla and Apple.</li>
-                <li>Performed sentiment analysis using VADER, analyzing the impact of social media sentiment on stock performance.</li>
-                <li>Built multiple linear regression models to predict stock price movements based on sentiment data.</li>
+                <li>Built multiple linear regression models for each company and performed comparative analysis to evaluate the impact of 'wallstreetbets' sentiment across different companies </li>
+                <li>Scraped financial data from Yahoo Finance and Reddit using APIs, collecting data for Apple, Microsoft, Google, Amazon, Meta, AMD, Nvidia Corporation, PepsiCo, Tesla, and Netflix from October 2021 to October 2022</li>
+                <li>Cleaned and organized Reddit posts by month, and utilized VADER sentiment analysis tool to obtain compound sentiment scores, considering distinctive social media post qualities such as capitalization, exclamation marks, and emojis</li>
+                <li>Employed Python modules such as pandas, sklearn, and APIs for efficient data extraction, data manipulation, and model implementation</li>
+                <li>Observed that companies with higher post volumes tended to have better-performing models, indicating the relevance of sentiment analysis in stock market predictions</li>
             </ul>
         </div>
 
         <div class="project-content">
             <h2>Tools and Technologies Used</h2>
             <ul>
-                <li>Python, Pandas</li>
+                <li>Python, Pandas, numpy, Scikit-learn</li>
                 <li>Reddit API, Yahoo Finance API</li>
                 <li>VADER Sentiment Analysis</li>
             </ul>
